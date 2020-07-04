@@ -15,10 +15,14 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/">
-              <Search></Search>
+              <div>
+                <Search></Search>
+              </div>
             </Route>
             <Route path="/searchResultPage">
-              <SearchResultPage/>
+              <div>
+                <SearchResultPage/>
+              </div>
             </Route>
           </Switch>
         </Router>
