@@ -31,7 +31,7 @@ export const fecthSearchs=(value)=>{
             'headers':{
                 'Access-Control-Request-Headers':'application/json',
                 'Access-Control-Allow-Origin':'*',
-                'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE1NzcwMTU1ODQsImV4cCI6MTU3NzEwMTk4NCwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsImlzcyI6ImZlYXRoZXJzIiwic3ViIjoiNWRmZjU3YTI5NmI3YTY4MDY4NjE0YjkzIiwianRpIjoiOWNhNjAyN2EtMzlhNS00YWQ5LWE0YjctODM5MDdkNTdiMGUzIn0.7MnVYloQ9PYzDyVcfHorNUOBzELkp_KKu9fiFdp44iw'
+                'Authorization':'Bearer ELkp_KKu9fiFdp44iw'
             }
         }
         console.log("this is from fetch users function "+value)
