@@ -1,5 +1,6 @@
 import {SEARCH_VALUE, FETCH_SEARCH_ERROR, FETCH_SEARCH_REQUEST, FETCH_SEARCH_SUCESS} from "./searchTypes"
 import axios from 'axios';
+import {AUTHORIZATION_TOKEN} from '../../AppConstants'
 export var searchValue = (value)=>{
     return{
         type: SEARCH_VALUE,
@@ -29,18 +30,14 @@ export const fecthSearchs=(value)=>{
     return function(dispatch){
         let config={
             'headers':{
-                'Access-Control-Request-Headers':'application/json',
-                'Access-Control-Allow-Origin':'*',
-                'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6ImFjY2VzcyJ9.eyJpYXQiOjE1NzcwMTU1ODQsImV4cCI6MTU3NzEwMTk4NCwiYXVkIjoiaHR0cHM6Ly95b3VyZG9tYWluLmNvbSIsImlzcyI6ImZlYXRoZXJzIiwic3ViIjoiNWRmZjU3YTI5NmI3YTY4MDY4NjE0YjkzIiwianRpIjoiOWNhNjAyN2EtMzlhNS00YWQ5LWE0YjctODM5MDdkNTdiMGUzIn0.7MnVYloQ9PYzDyVcfHorNUOBzELkp_KKu9fiFdp44iw'
+                'Authorization':AUTHORIZATION_TOKEN
             }
         }
-        console.log("this is from fetch users function "+value)
         dispatch(fecthSearchRequest());
-        var url=`https://api.twitter.com/1.1/search/tweets.json?q=${value}`;
+        var url=`https://cors-anywhere.herokuapp.com/https://api.twitter.com/1.1/search/tweets.json?q=${value}&lang=en`;
         axios.get(url,config)
         .then(res=>{
             var users = res.data.statuses;
-            console.log("aaaaaaaaaaaaaaaaaaa"+users)
             dispatch(fecthSearchSucess(users));
         })
         .catch(err=>{
