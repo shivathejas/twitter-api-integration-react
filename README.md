@@ -1,6 +1,6 @@
 Please follow the below steps to setup the application on local:
 
-### step1: Run "cd twitter-api-integration-rect".
+### step1: Run "cd twitter-api-integration-react-master".
 ### step2: Run "npm install"
 ### step3: Add the Authorization token under AppConstatnts.js file.
           This file is under "src" directory
