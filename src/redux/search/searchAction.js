@@ -30,13 +30,7 @@ export const fecthSearchs=(value)=>{
     return function(dispatch){
         let config={
             'headers':{
-<<<<<<< HEAD
                 'Authorization':AUTHORIZATION_TOKEN
-=======
-                'Access-Control-Request-Headers':'application/json',
-                'Access-Control-Allow-Origin':'*',
-                'Authorization':'Bearer ELkp_KKu9fiFdp44iw'
->>>>>>> 79ff60925be851cca19ff2206fcd89af2c6aea84
             }
         }
         dispatch(fecthSearchRequest());
